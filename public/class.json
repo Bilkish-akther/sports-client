@@ -1,0 +1,106 @@
+[
+    {
+      "id": 1,
+      "sport": "Cricket",
+      "instructor": "John Doe",
+      "availableSeats": 15,
+      "price": 10.99,
+      "image": "https://img.freepik.com/free-photo/baseball-player-posing-with-glove-ball_23-2148347976.jpg?size=626&ext=jpg&ga=GA1.2.1801396805.1665863372&semt=ais"
+    },
+    {
+      "id": 2,
+      "sport": "Soccer",
+      "instructor": "Jane Smith",
+      "availableSeats": 20,
+      "price": 12.99,
+      "image": "https://t3.ftcdn.net/jpg/05/40/95/20/240_F_540952029_9L5XzutuceTtVZqerC2WmcjujXyYEXWR.jpg"
+    },
+    {
+      "id": 3,
+      "sport": "Badminton",
+      "instructor": "Mike Johnson",
+      "availableSeats": 10,
+      "price": 8.99,
+      "image": "https://img.freepik.com/free-photo/badminton-concept-with-shuttlecock-racket_23-2149940866.jpg?size=626&ext=jpg&ga=GA1.1.1801396805.1665863372&semt=ais"
+    },
+    {
+      "id": 4,
+      "sport": "Basketball",
+      "instructor": "Emily Davis",
+      "availableSeats": 12,
+      "price": 9.99,
+      "image": "https://img.freepik.com/free-photo/aerial-shooting-outdoor-basketball-court_1205-11155.jpg?size=626&ext=jpg&ga=GA1.1.1801396805.1665863372&semt=ais"
+    },
+    {
+      "id": 5,
+      "sport": "Cricket",
+      "instructor": "David Anderson",
+      "availableSeats": 18,
+      "price": 11.99,
+      "image": "https://img.freepik.com/free-vector/stadium-cricket_1284-6362.jpg?size=338&ext=jpg&ga=GA1.1.1801396805.1665863372&semt=ais"
+    },
+    {
+      "id": 6,
+      "sport": "Soccer",
+      "instructor": "Sarah Thompson",
+      "availableSeats": 25,
+      "price": 14.99,
+      "image": "https://img.freepik.com/free-photo/soccer-players-action-professional-stadium_654080-1820.jpg?size=626&ext=jpg&ga=GA1.1.1801396805.1665863372&semt=ais"
+    },
+    {
+      "id": 7,
+      "sport": "Badminton",
+      "instructor": "Michael Brown",
+      "availableSeats": 8,
+      "price": 7.99,
+      "image": "https://img.freepik.com/free-photo/top-view-sport-field_158595-6248.jpg?size=626&ext=jpg&ga=GA1.1.1801396805.1665863372&semt=ais"
+    },
+    {
+      "id": 8,
+      "sport": "Basketball",
+      "instructor": "Olivia Johnson",
+      "availableSeats": 10,
+      "price": 8.99,
+      "image": "https://img.freepik.com/free-photo/black-man-doing-sports-playing-basketball-sunrise-silhouette_285396-1446.jpg?size=626&ext=jpg&ga=GA1.1.1801396805.1665863372&semt=ais"
+    },
+    {
+      "id": 9,
+      "sport": "Cricket",
+      "instructor": "Daniel Wilson",
+      "availableSeats": 15,
+      "price": 10.99,
+      "image": "https://img.freepik.com/free-photo/football-stadium_23-2147644403.jpg?size=338&ext=jpg&ga=GA1.1.1801396805.1665863372&semt=ais"
+    },
+    {
+      "id": 10,
+      "sport": "Soccer",
+      "instructor": "Robert Garcia",
+      "availableSeats": 4,
+      "price": 6.99,
+      "image": "https://img.freepik.com/free-photo/football-composition-with-copyspace-football_23-2147827703.jpg?size=626&ext=jpg&ga=GA1.1.1801396805.1665863372&semt=ais"
+    },
+    {
+      "id": 11,
+      "sport": "Badminton",
+      "instructor": "Maria Rodriguez",
+      "availableSeats": 22,
+      "price": 13.99,
+      "image": "https://img.freepik.com/free-photo/badminton-concept-with-shuttlecock-racket_23-2149940890.jpg?size=626&ext=jpg&ga=GA1.1.1801396805.1665863372&semt=ais"
+    },
+    {
+      "id": 12,
+      "sport": "Basketball",
+      "instructor": "Jason Thompson",
+      "availableSeats": 10,
+      "price": 8.99,
+      "image": "https://img.freepik.com/free-photo/basketball-player-attempting-distance-throw_23-2147644429.jpg?size=626&ext=jpg&ga=GA1.1.1801396805.1665863372&semt=ais"
+    },
+    {
+      "id": 13,
+      "sport": "Cricket",
+      "instructor": "Adam Wilson",
+      "availableSeats": 15,
+      "price": 10.99,
+      "image": "https://img.freepik.com/free-photo/sports-stadium_1308-4848.jpg?size=626&ext=jpg&ga=GA1.2.1801396805.1665863372&semt=ais"
+    }
+  ]
