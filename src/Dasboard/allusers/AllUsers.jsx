@@ -1,15 +1,15 @@
 import { useQuery } from "@tanstack/react-query";
 
 import Swal from "sweetalert2";
-import { FaTrashAlt } from "react-icons/fa";
+import { FaTrashAlt, FaUserShield } from "react-icons/fa";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 
 
 const AllUsers = () => {
     const [axiosSecure] = useAxiosSecure()
 
-    const { data: users = [], refetch } = useQuery(["ussers"], async () => {
-        const res = await axiosSecure.get('/users')
+    const { data: users = [], refetch } = useQuery(["users"], async () => {
+        const res = await axiosSecure.get('http://localhost:5000//users')
         return res.data;
     });
 
@@ -122,6 +122,8 @@ const AllUsers = () => {
                                     <td>{user.displayName}</td>
                                     <td>{user.email}</td>
                                     <td>{user.role === 'admin' ? 'admin' :
+                                  
+                                   
                                         <button onClick={() => handleMakeAdmin(user._id)} className="btn btn-sm bg-sky-500 text-black border-0 ">Admin</button>
                                     } </td>
                                     <td>{user.role === 'instructor' ? 'instructor' :
