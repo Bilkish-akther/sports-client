@@ -80,6 +80,7 @@ const MyClasses = () => {
                       </div>
                     </div>
                   </td>
+                  
                   <td>{item.email}</td>
                   <td>{item.sport}</td>
                   <td className="">{item.price}$

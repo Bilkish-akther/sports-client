@@ -46,7 +46,7 @@ const Home = () => {
 
 
 
-            <div className=''>
+            <div className='grid md:grid-cols-2 lg:grid-cols-3 mt-4 gap-8 text-center'>
                 {
                     populers.slice(0, 6).map(populer => <PopulerInst
                         key={populer.id}

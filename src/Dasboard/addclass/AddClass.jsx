@@ -7,7 +7,7 @@ import { useForm } from "react-hook-form";
 const img_hosting_token = import.meta.env.VITE_Image_Upload_Token;
 // console.log(img_hosting_token)
 const AddClass = () => {
-  const {user} = useContext(AuthContext)
+  const { user } = useContext(AuthContext)
   const [axiosSecure] = useAxiosSecure();
   const {
     register,
@@ -30,17 +30,19 @@ const AddClass = () => {
       .then((imgResponse) => {
         if (imgResponse.success) {
           const imgUrl = imgResponse.data.display_url;
-          const { price, instructorName, danceName, rating,  availableSeats, email } = data;
+          const { price, instructorName,
+            sportsName, rating, availableSeats, email } = data;
           const newItem = {
             instructorName,
             price: parseFloat(price),
-            danceName,
+
+            sportsName,
             availableSeats: parseFloat(availableSeats),
             image: imgUrl,
             email,
-            rating : parseFloat(rating)
+            rating: parseFloat(rating)
           };
-        //   console.log(newItem);
+          //   console.log(newItem);
           axiosSecure.post("/addClass", newItem).then((data) => {
             console.log("after posting new class", data.data);
             if (data.data.insertedId) {
@@ -58,17 +60,17 @@ const AddClass = () => {
       });
   };
 
-//   danceName, image, instructorName, price, rating, availableSeats
+
 
   console.log(errors);
   return (
     <div data-aos="fade-up" className=" w-full p-11 ">
-      <h2 className="text-sky-500 text-4xl font-bold text-center my-16">Add Dance Information</h2>
-      <form  onSubmit={handleSubmit(onSubmit)} className="grid md:w-8/12 mx-auto gap-2">
+      <h2 className="text-sky-500 text-4xl font-bold text-center my-16">Add Sports Information</h2>
+      <form onSubmit={handleSubmit(onSubmit)} className="grid md:w-8/12 mx-auto gap-2">
         <input
           type="text"
-          placeholder="Dance name"
-          {...register("danceName", { required: true, maxLength: 80 })}
+          placeholder="Sports Name"
+          {...register("sport", { required: true, maxLength: 80 })}
           className="input input-bordered w-full "
         />
 
@@ -100,16 +102,16 @@ const AddClass = () => {
           className="input input-bordered w-full "
         />
 
-<input
+        <input
           type="number"
           defaultValue="4.5"
           {...register("rating", { required: true, maxLength: 80 })}
           className="input input-bordered w-full text-black "
         />
 
-        
 
-     
+
+
         <input
           type="file"
           {...register("image", { required: true })}
