@@ -7,7 +7,7 @@ const useInstructor = () => {
     const [loading, setLoading]=useState(true)
 
     useEffect(() => {
-        fetch('http://localhost:5000/instractor')
+        fetch('https://sports-academi-server-nrx8uamts-bilkish-akther.vercel.app/instractor')
             .then(res => res.json())
             .then(data => {
                 setLoading(false)

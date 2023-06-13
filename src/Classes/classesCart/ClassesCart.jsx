@@ -16,7 +16,7 @@ const ClassesCart = ({ classCart }) => {
     const handleEnroll = ()=>{
         if(user && user.email){
             const enrollData = {enrollId: _id, SportsName, image,instructorName, price, availableSeats, email: user.email }
-            fetch('http://localhost:5000/all-enroll', {
+            fetch('https://sports-academi-server-nrx8uamts-bilkish-akther.vercel.appall-enroll', {
                 method: 'POST',
                 headers: {
                     'content-type' : 'application/json'

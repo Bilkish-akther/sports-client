@@ -9,7 +9,7 @@ const useClass = () => {
     const [loading, setLoading]=useState(true)
     
     useEffect(()=>{
-      fetch('http://localhost:5000/addClasses')
+      fetch('https://sports-academi-server-nrx8uamts-bilkish-akther.vercel.app/addClasses')
       .then(res=>res.json())
       .then(data=>{
         setLoading(false)

@@ -26,7 +26,7 @@ const AllUsers = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/user-delete/${user._id}`, {
+                fetch(`https://sports-academi-server-nrx8uamts-bilkish-akther.vercel.app/user-delete/${user._id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -51,7 +51,7 @@ const AllUsers = () => {
 
     const handleMakeAdmin = id => {
         console.log(id)
-        fetch(`http://localhost:5000/users/admin/${id}`, {
+        fetch(`https://sports-academi-server-nrx8uamts-bilkish-akther.vercel.app/users/admin/${id}`, {
             method: 'PATCH',
         })
             .then(res => res.json())
@@ -82,7 +82,7 @@ const AllUsers = () => {
             "student":0
         }
 
-      await  fetch(`http://localhost:5000/instractor`, {
+      await  fetch(`https://sports-academi-server-nrx8uamts-bilkish-akther.vercel.app/instractor`, {
             method: 'POST',
             body: JSON.stringify(instructor),
             headers: {
@@ -90,7 +90,7 @@ const AllUsers = () => {
           }
         });
 
-        fetch(`http://localhost:5000/users/instructor/${user._id}`, {
+        fetch(`https://sports-academi-server-nrx8uamts-bilkish-akther.vercel.app/users/instructor/${user._id}`, {
             method: 'PATCH',
         })
             .then(res => res.json())

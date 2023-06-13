@@ -29,7 +29,7 @@ const Signin = () => {
                 updateUserProfile(data.name, data.photoURL)
                     .then(() => {
                         const saveUser = { name: data.name, email: data.email,"image":data.photoURL };
-                        fetch("http://localhost:5000/users", {
+                        fetch("https://sports-academi-server-nrx8uamts-bilkish-akther.vercel.app/users", {
                             method: "POST",
                             headers: {
                                 "content-type": "application/json",

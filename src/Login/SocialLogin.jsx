@@ -22,7 +22,7 @@ const SocialLogin = () => {
             email: loggedUser.email,
             photoURL : loggedUser.photoURL
           };
-          fetch("http://localhost:5000/users", {
+          fetch("https://sports-academi-server-nrx8uamts-bilkish-akther.vercel.app/users", {
             method: "POST",
             headers: {
               "content-type": "application/json",
