@@ -63,11 +63,11 @@ const Signin = () => {
                 console.log(error)
             });
     };
-    //   console.log(errors);
+
     return (
         <div>
             <Helmet>
-                <title>Dance Expressions | Signup</title>
+                <title>Sports Academi | Signup</title>
             </Helmet>
             <div className=" mt-11" data-aos="fade-up">
                 <div className=" w-10/12 md:w-4/12 lg:w-5/12 mx-auto  ">

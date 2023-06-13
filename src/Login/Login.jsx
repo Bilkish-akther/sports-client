@@ -43,7 +43,7 @@ const Login = () => {
     return (
         <div>
             <Helmet>
-                <title>Dance Expressions | Login</title>
+                <title>Sports Academi  | Login</title>
             </Helmet>
             <div className=" mt-11" data-aos="fade-up" >
                 <div className="  w-10/12 md:w-4/12 lg:w-5/12 mx-auto  ">
