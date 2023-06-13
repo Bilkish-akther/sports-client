@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 
 import Swal from "sweetalert2";
-import { FaTrashAlt, FaUserShield } from "react-icons/fa";
+import { FaTrashAlt } from "react-icons/fa";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 
 
@@ -9,7 +9,7 @@ const AllUsers = () => {
     const [axiosSecure] = useAxiosSecure()
 
     const { data: users = [], refetch } = useQuery(["users"], async () => {
-        const res = await axiosSecure.get('http://localhost:5000/users')
+        const res = await axiosSecure.get('/users')
         return res.data;
     });
 
@@ -48,6 +48,7 @@ const AllUsers = () => {
 
     }
 
+
     const handleMakeAdmin = id => {
         console.log(id)
         fetch(`http://localhost:5000/users/admin/${id}`, {
@@ -69,9 +70,27 @@ const AllUsers = () => {
             })
     }
 
-    const handleMakeInstructor = id => {
-        console.log(id)
-        fetch(`http://localhost:5000/users/instructor/${id}`, {
+    const handleMakeInstructor = async user => {
+    
+    
+        var instructor={
+            "image":user.image,
+            "name":user.name,
+            "rating":0.0,
+            "sport":"FoodBall",
+            "email":user.email,
+            "student":0
+        }
+
+      await  fetch(`http://localhost:5000/instractor`, {
+            method: 'POST',
+            body: JSON.stringify(instructor),
+            headers: {
+          'Content-Type': 'application/json'
+          }
+        });
+
+        fetch(`http://localhost:5000/users/instructor/${user._id}`, {
             method: 'PATCH',
         })
             .then(res => res.json())
@@ -122,12 +141,10 @@ const AllUsers = () => {
                                     <td>{user.displayName}</td>
                                     <td>{user.email}</td>
                                     <td>{user.role === 'admin' ? 'admin' :
-                                  
-                                   
                                         <button onClick={() => handleMakeAdmin(user._id)} className="btn btn-sm bg-sky-500 text-black border-0 ">Admin</button>
                                     } </td>
                                     <td>{user.role === 'instructor' ? 'instructor' :
-                                        <button onClick={() => handleMakeInstructor(user._id)} className="btn btn-sm bg-sky-500 text-black border-0 ">instructor</button>
+                                        <button onClick={() => handleMakeInstructor(user)} className="btn btn-sm bg-sky-500 text-black border-0 ">instructor</button>
                                     } </td>
 
 

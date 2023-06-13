@@ -11,7 +11,7 @@ const Classes = () => {
     return (
         <>
           <Helmet>
-                <title>Sports Academi || Classes</title>
+                <title>Sports Club BD || Classes</title>
             </Helmet>
 
             

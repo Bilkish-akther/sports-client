@@ -28,7 +28,7 @@ const Signin = () => {
                 console.log(loggedUser);
                 updateUserProfile(data.name, data.photoURL)
                     .then(() => {
-                        const saveUser = { name: data.name, email: data.email };
+                        const saveUser = { name: data.name, email: data.email,"image":data.photoURL };
                         fetch("http://localhost:5000/users", {
                             method: "POST",
                             headers: {
@@ -63,11 +63,11 @@ const Signin = () => {
                 console.log(error)
             });
     };
-
+    //   console.log(errors);
     return (
         <div>
             <Helmet>
-                <title>Sports Academi | Signup</title>
+                <title>Sports Club BD | Signup</title>
             </Helmet>
             <div className=" mt-11" data-aos="fade-up">
                 <div className=" w-10/12 md:w-4/12 lg:w-5/12 mx-auto  ">

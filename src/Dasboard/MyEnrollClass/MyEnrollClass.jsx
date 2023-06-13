@@ -19,7 +19,7 @@ const MyEnrollClass = () => {
     return (
         <div className="w-full pb-[700px] ">
         <Helmet>
-          <title>Sports Academi | Dashboard | My-Enroll-Class</title>
+          <title>Sports Club BD | Dashboard | My-Enroll-Class</title>
         </Helmet>
         
   

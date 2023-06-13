@@ -14,7 +14,7 @@ const Payment = () => {
     const price = parseFloat(total.toFixed(2))
     return (
         <div className='pb-[700px] w-full pt-20 bg-slate-300 '>
-            <h2 className='text-center mb-20 text-sky-500 text-3xl font-bold'>taka o taka</h2>
+            <h2 className='text-center mb-20 text-sky-500 text-3xl font-bold'>Payment Information</h2>
           
             <Elements stripe={stripePromise}>
             <CheckoutForm price={price} cart={cart}></CheckoutForm>

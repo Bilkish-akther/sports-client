@@ -45,7 +45,7 @@ const MyClasses = () => {
     return (
         <div className="w-full mt-24 pb-[600px] text-white">
         <Helmet>
-          <title>Sports Academi | Dashboard | My Class</title>
+          <title>Sports  Club BD | Dashboard | My Class</title>
         </Helmet>
         <div className="flex uppercase font-semibold justify-evenly items-center gap-4 mb-2">
           <h3 className="text-3xl font-bold text-sky-500">My Class Information : <span className='text-red-500'>{classes.length}</span></h3>

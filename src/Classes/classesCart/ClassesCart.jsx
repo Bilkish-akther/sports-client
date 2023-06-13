@@ -8,14 +8,14 @@ import Swal from 'sweetalert2';
 // ..
 AOS.init();
 const ClassesCart = ({ classCart }) => {
-    const { sport, instructor, availableSeats, price, image, _id } = classCart
+    const { SportsName, instructorName, availableSeats, price, image, _id } = classCart
     const {user} = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
 
     const handleEnroll = ()=>{
         if(user && user.email){
-            const enrollData = {enrollId: _id, sport, image,instructor, price, availableSeats, email: user.email }
+            const enrollData = {enrollId: _id, SportsName, image,instructorName, price, availableSeats, email: user.email }
             fetch('http://localhost:5000/all-enroll', {
                 method: 'POST',
                 headers: {
@@ -61,8 +61,8 @@ const ClassesCart = ({ classCart }) => {
             <div data-aos="fade-up" data-aos-duration="3000" className="card card-compact bg-base-100 shadow-xl p-4">
                 <figure><img className="h-56 w-full" src={image} alt="Shoes" /></figure>
                 <div className="p-0 mt-4">
-                   <p> <span className="text-green-800 font-bold">Sports Name:</span> {sport}</p>
-                   <p> <span className="text-green-800 font-bold">Instructor name:</span> {instructor}</p>
+                   <p> <span className="text-green-800 font-bold">Sports Name:</span> {SportsName}</p>
+                   <p> <span className="text-green-800 font-bold">Instructor name:</span> {instructorName}</p>
                    <p> <span className="text-green-800 font-bold">Avaolablesets: </span> {availableSeats}</p>
                    <p> <span className="text-green-800 font-bold">Course Cost:</span> ${price}</p>
                    

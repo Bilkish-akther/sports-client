@@ -63,11 +63,11 @@ const AddClass = () => {
   console.log(errors);
   return (
     <div data-aos="fade-up" className=" w-full p-11 ">
-      <h2 className="text-sky-500 text-4xl font-bold text-center my-16">Add Sports Information</h2>
+      <h2 className="text-sky-500 text-4xl font-bold text-center my-16">Add Dance Information</h2>
       <form  onSubmit={handleSubmit(onSubmit)} className="grid md:w-8/12 mx-auto gap-2">
         <input
           type="text"
-          placeholder="Sports name"
+          placeholder="Dance name"
           {...register("danceName", { required: true, maxLength: 80 })}
           className="input input-bordered w-full "
         />
@@ -107,7 +107,9 @@ const AddClass = () => {
           className="input input-bordered w-full text-black "
         />
 
+        
 
+     
         <input
           type="file"
           {...register("image", { required: true })}

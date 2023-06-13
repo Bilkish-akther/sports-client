@@ -9,7 +9,7 @@ const PaymentHistory = () => {
     return (
         <div className="w-full pb-[700px]   ">
         <Helmet>
-          <title>Sports Academi | Dashboard | Payment-History</title>
+          <title>Sports Club BD | Dashboard | Payment-History</title>
         </Helmet>
         
   
