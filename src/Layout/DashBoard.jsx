@@ -9,8 +9,8 @@ import useInstructor from "../hooks/useInstructor";
 
 const DashBoard = () => {
 
-  const [isAdmin] = useAdmin();
-
+  // const [isAdmin] = useAdmin();
+  const isAdmin = true;
   const [isInstructor] = useInstructor();
 
 
@@ -37,44 +37,44 @@ const DashBoard = () => {
             {/* Sidebar content here */}
 
 
-            {
-              isAdmin ?
-                (
-                  <>
-                    <li><NavLink to='/'><FaHome></FaHome>Admin Home</NavLink></li>
-                    <li><NavLink to='/dashboard/all-users'><FaWallet></FaWallet>All Users</NavLink></li>
-                  </>
-                )
-                :
-                isInstructor ?
-                  (
-                    <>
-                      <li><NavLink to='/'><FaHome></FaHome>Instructor Home</NavLink></li>
-                      <li><NavLink to='/dashboard/add-class-page'><FaWallet></FaWallet>Add Class</NavLink></li>
-                      <li><NavLink to='/dashboard/my-class'><FaShoppingCart></FaShoppingCart>
-                        My Class
-                      </NavLink></li>
+        {
+          isAdmin ?
+          (
+            <>
+            <li><NavLink to='/'><FaHome></FaHome>Admin Home</NavLink></li>
+          <li><NavLink to='/dashboard/all-users'><FaWallet></FaWallet>All Users</NavLink></li>
+          </>
+          )
+          :
+          isInstructor ?
+        (
+          <>
+          <li><NavLink to='/'><FaHome></FaHome>Instructor Home</NavLink></li>
+          <li><NavLink to='/dashboard/add-class-page'><FaWallet></FaWallet>Add Class</NavLink></li>
+          <li><NavLink to='/dashboard/my-class'><FaShoppingCart></FaShoppingCart>  
+          My Class          
+            </NavLink></li>
 
-                    </>
+          </>
+            
+        )
+          :
+          (
+            <>
+            <li><NavLink to='/'><FaHome></FaHome>User Home</NavLink></li>
+            <li><NavLink to='/dashboard/selectedclass'><FaShoppingCart></FaShoppingCart>
+              My Selected Class <div className="badge badge-secondary"></div>
+            </NavLink></li>
+            <li><NavLink to='/dashboard/my-enroll-class'><FaShoppingCart></FaShoppingCart>
+              My Enrollmet class <div className="badge badge-secondary"></div>
+            </NavLink></li>
+            <li><NavLink to='/dashboard/payment-history'><FaWallet></FaWallet> Payment History</NavLink></li>
+          
+          </>
+          )
+        }
 
-                  )
-                  :
-                  (
-                    <>
-                      <li><NavLink to='/'><FaHome></FaHome>User Home</NavLink></li>
-                      <li><NavLink to='/dashboard/selectedclass'><FaShoppingCart></FaShoppingCart>
-                        My Selected Class <div className="badge badge-secondary"></div>
-                      </NavLink></li>
-                      <li><NavLink to='/dashboard/my-enroll-class'><FaShoppingCart></FaShoppingCart>
-                        My Enrollmet class <div className="badge badge-secondary"></div>
-                      </NavLink></li>
-                      <li><NavLink to='/dashboard/payment-history'><FaWallet></FaWallet> Payment History</NavLink></li>
-
-                    </>
-                  )
-            }
-
-
+      
           </ul>
 
         </div>

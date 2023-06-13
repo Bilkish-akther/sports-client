@@ -9,7 +9,7 @@ const AllUsers = () => {
     const [axiosSecure] = useAxiosSecure()
 
     const { data: users = [], refetch } = useQuery(["users"], async () => {
-        const res = await axiosSecure.get('http://localhost:5000//users')
+        const res = await axiosSecure.get('http://localhost:5000/users')
         return res.data;
     });
 
